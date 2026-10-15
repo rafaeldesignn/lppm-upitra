@@ -34,7 +34,7 @@ export const Navbar: React.FC = () => {
           Beranda
         </Link>
 
-        {/* Notice & News */}
+        {/* Berita */}
         <Link
           to="/news"
           className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -43,10 +43,10 @@ export const Navbar: React.FC = () => {
               : 'text-gray-300 hover:text-white hover:bg-gray-800/60'
           }`}
         >
-          Notice & News
+          Berita
         </Link>
 
-        {/* Events / Agenda */}
+        {/* Agenda */}
         <Link
           to="/events"
           className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -55,10 +55,10 @@ export const Navbar: React.FC = () => {
               : 'text-gray-300 hover:text-white hover:bg-gray-800/60'
           }`}
         >
-          Events / Agenda
+          Agenda
         </Link>
 
-        {/* Lecturer */}
+        {/* Dosen */}
         <Link
           to="/lecturers"
           className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
               : 'text-gray-300 hover:text-white hover:bg-gray-800/60'
           }`}
         >
-          Lecturer
+          Dosen
         </Link>
 
         {/* Tombol Login */}
