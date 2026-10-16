@@ -305,9 +305,9 @@ export default function App() {
             {/* Menu Navigasi Publik */}
             {[
               { id: 'home', label: 'Beranda', icon: Home },
-              { id: 'news', label: 'Notice & News', icon: Megaphone },
-              { id: 'agenda', label: 'Events / Agenda', icon: Calendar },
-              { id: 'dosen', label: 'Lecturer', icon: UserCheck },
+              { id: 'news', label: 'Berita', icon: Megaphone },
+              { id: 'agenda', label: 'Agenda', icon: Calendar },
+              { id: 'dosen', label: 'Dosen', icon: UserCheck },
             ].map((item) => {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
@@ -410,39 +410,6 @@ export default function App() {
             <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
               Layanan terpadu untuk pengajuan proposal riset, pengabdian masyarakat (PkM), profil dosen, agenda, dan unduhan dokumen resmi LPPM.
             </p>
-
-            <div className="pt-4 flex flex-wrap justify-center gap-4">
-              <button
-                onClick={() => {
-                  if (isLoggedIn) {
-                    setActiveTab('riset');
-                  } else {
-                    setActiveTab('login');
-                  }
-                  setSelectedDosen(null);
-                  setSubmitSuccess(false);
-                }}
-                className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-600/25 transition-all duration-200 hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer"
-              >
-                <Microscope size={18} />
-                Pengajuan Riset
-              </button>
-              <button
-                onClick={() => {
-                  if (isLoggedIn) {
-                    setActiveTab('pkm');
-                  } else {
-                    setActiveTab('login');
-                  }
-                  setSelectedDosen(null);
-                  setSubmitSuccess(false);
-                }}
-                className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-emerald-600/25 transition-all duration-200 hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer"
-              >
-                <Handshake size={18} />
-                Pengajuan PkM
-              </button>
-            </div>
           </div>
         </section>
       )}
