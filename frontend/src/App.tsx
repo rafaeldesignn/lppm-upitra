@@ -335,7 +335,7 @@ export default function App() {
             {isLoggedIn && (
               <>
                 {[
-                  { id: 'guides', label: 'Guides & Templates', icon: FileText },
+                  { id: 'guides', label: 'Dokumen', icon: FileText },
                   { id: 'riset', label: 'Riset', icon: Microscope },
                   { id: 'pkm', label: 'Pengabdian (PkM)', icon: Handshake },
                 ].map((item) => {
@@ -469,7 +469,7 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* 2. VISI & MISI (DI ATAS NEWS) */}
+                {/* 2. VISI & MISI */}
                 <div className="grid md:grid-cols-2 gap-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200/80 shadow-xs">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 text-blue-600 font-bold text-lg">
@@ -498,11 +498,11 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* 3. NOTICE & NEWS TERBARU */}
+                {/* 3. BERITA TERBARU */}
                 <div>
                   <div className="flex justify-between items-center mb-6">
                     <div>
-                      <h2 className="text-2xl font-bold text-slate-900">Notice & News Terbaru</h2>
+                      <h2 className="text-2xl font-bold text-slate-900">Berita Terbaru</h2>
                       <p className="text-sm text-slate-500">Pengumuman dan kabar terbaru seputar LPPM UPITRA</p>
                     </div>
                     <button 
@@ -542,11 +542,11 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* 4. EVENTS / AGENDA (DI BAWAH NEWS) */}
+                {/* 4. AGENDA AKADEMIK */}
                 <div>
                   <div className="flex justify-between items-center mb-6">
                     <div>
-                      <h2 className="text-2xl font-bold text-slate-900">Events & Agenda Akademik</h2>
+                      <h2 className="text-2xl font-bold text-slate-900">Agenda Akademik</h2>
                       <p className="text-sm text-slate-500">Jadwal kegiatan penting, seminar, dan tenggat waktu proposal</p>
                     </div>
                     <button 
@@ -592,11 +592,11 @@ export default function App() {
               </div>
             )}
 
-            {/* MODUL 1: NOTICE & NEWS */}
+            {/* MODUL 1: BERITA */}
             {activeTab === 'news' && (
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                  <Megaphone className="text-blue-600" /> Notice & News
+                  <Megaphone className="text-blue-600" /> Berita LPPM
                 </h2>
                 {newsList.length === 0 ? (
                   <div className="bg-white p-8 rounded-2xl border border-slate-200 text-center text-slate-500">
@@ -621,11 +621,11 @@ export default function App() {
               </div>
             )}
 
-            {/* MODUL 2: EVENTS / AGENDA */}
+            {/* MODUL 2: AGENDA */}
             {activeTab === 'agenda' && (
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                  <Calendar className="text-blue-600" /> Events / Agenda
+                  <Calendar className="text-blue-600" /> Agenda Akademik
                 </h2>
                 {agendaList.length === 0 ? (
                   <div className="bg-white p-8 rounded-2xl border border-slate-200 text-center text-slate-500">
@@ -664,7 +664,7 @@ export default function App() {
               <div className="max-w-md mx-auto bg-white p-8 rounded-2xl border border-slate-200/80 shadow-lg my-10">
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-slate-900">Login Sistem LPPM</h2>
-                  <p className="text-sm text-slate-500 mt-1">Masuk untuk mengakses Guides, Riset, dan PkM</p>
+                  <p className="text-sm text-slate-500 mt-1">Masuk untuk mengakses Dokumen, Riset, dan PkM</p>
                 </div>
                 <form onSubmit={handleLoginSubmit} className="space-y-4">
                   <div>
@@ -695,15 +695,15 @@ export default function App() {
               </div>
             )}
 
-            {/* MODUL 4: GUIDES & TEMPLATES (AREA PRIVAT) */}
+            {/* MODUL 4: DOKUMEN (AREA PRIVAT) */}
             {activeTab === 'guides' && isLoggedIn && (
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                  <FileText className="text-emerald-600" /> Guides & Templates
+                  <FileText className="text-emerald-600" /> Dokumen & Template
                 </h2>
                 {guideList.length === 0 ? (
                   <div className="bg-white p-8 rounded-2xl border border-slate-200 text-center text-slate-500">
-                    Belum ada file panduan/template di server backend.
+                    Belum ada file dokumen di server backend.
                   </div>
                 ) : (
                   <div className="grid md:grid-cols-2 gap-6">
@@ -711,7 +711,7 @@ export default function App() {
                       <div key={item.id || index} className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex items-start justify-between gap-4">
                         <div>
                           <span className="text-xs font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md">
-                            {item.kategori || 'Panduan'}
+                            {item.kategori || 'Dokumen'}
                           </span>
                           <h3 className="font-bold text-slate-900 mt-2 text-base">{item.nama_dokumen || 'Dokumen Tanpa Nama'}</h3>
                         </div>
@@ -944,7 +944,7 @@ export default function App() {
               </div>
             )}
 
-            {/* MODUL 7: DOSEN & PENELITI (LECTURER) */}
+            {/* MODUL 7: DOSEN & PENELITI */}
             {activeTab === 'dosen' && (
               <div className="space-y-6">
                 {selectedDosen ? (
